@@ -1,0 +1,10 @@
+.title {
+  font-size: 50rpx;
+  color: red;
+  text-align: center;
+  margin-bottom: 40rpx;
+}
+button {
+  width: 400rpx;
+  height: 100rpx;
+}

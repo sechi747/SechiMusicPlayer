@@ -1,0 +1,91 @@
+/* 头部区域 */
+.recommendContainer .header {
+  position: relative;
+  width: 100%;
+  height: 300rpx;
+}
+.recommendContainer .header image {
+  width: 100%;
+  height: 100%;
+}
+.recommendContainer .header .date {
+  position: absolute;
+  left: 10%;
+  top: 90%;
+  margin-left: -150rpx;
+  margin-top: -100rpx;
+  width: 300rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fbfbfc;
+}
+.header .date .day {
+  font-size: 50rpx;
+  font-weight: bold;
+  font-style: italic;
+}
+.header .date .month {
+  font-size: 28rpx;
+  font-style: italic;
+}
+/* 列表头部区域 */
+.listContainer {
+  padding: 0 20rpx;
+  background: linear-gradient(to bottom, #485563, #29323c);
+}
+.listContainer .listHeader {
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.listHeader .playAll text {
+  padding-right: 14rpx;
+  font-weight: bold;
+}
+.listHeader .selectAll text {
+  padding-right: 10rpx;
+  font-size: 30rpx;
+}
+/* 列表内容区域 */
+.listScroll {
+  height: calc(100vh - 380rpx);
+}
+.listScroll .scrollItem{
+  display: flex;
+  margin: 30rpx 0;
+}
+.scrollItem image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 8rpx;
+}
+.scrollItem .musicInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 14rpx;
+  justify-content: space-between;
+}
+.scrollItem .musicInfo text {
+  max-width: 500rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.musicInfo .title {
+  font-size: 26rpx;
+  color: white;
+}
+.musicInfo .author {
+  font-size: 22rpx;
+  color: #919193;
+}
+.scrollItem .iconfont {
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  margin-left: auto;
+}

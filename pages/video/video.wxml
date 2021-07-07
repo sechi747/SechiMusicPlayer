@@ -1,0 +1,56 @@
+<view class="videoContainer">
+  <!-- 头部区域 -->
+  <view class="header">
+    <image src="https://z3.ax1x.com/2021/06/03/21zv6A.png"></image>
+    <view class="search" bindtap="toSearch">
+      搜索歌曲
+    </view>
+    <image class="logo" src="https://z3.ax1x.com/2021/06/03/21zxOI.png"></image>
+  </view>
+  <!-- 导航区域 -->
+  <scroll-view scroll-x 
+  class="navScroll" 
+  scroll-into-view="{{'scroll' + navId}}" 
+  scroll-with-animation 
+  enable-flex>
+    <view id="{{'scroll' + item.id}}" class="navItem"  wx:for="{{videoGroupList}}" wx:key="id">
+      <view class="navContent {{navId === item.id?'active':' '}}" id="{{item.id}}" bindtap="changeNav">
+        {{item.name}}
+      </view>
+    </view>
+  </scroll-view>
+  <!-- 视频区域 -->
+  <scroll-view scroll-y class="videoScroll" 
+  bindrefresherrefresh="handleRefresher" 
+  bindscrolltolower="handleLoader" 
+  refresher-enabled
+  refresher-triggered="{{isTriggered}}">
+    <view class="videoItem" wx:for="{{videoList}}" wx:key="id">
+      <video bindplay="handlePlay" bindtimeupdate="handleTimeUpdate" bindended="handleEnded" 
+      id="{{item.data.vid}}"
+      src="{{item.data.urlInfo}}" 
+      wx:if="{{videoId === item.data.vid}}" 
+      autoplay 
+      enable-play-gesture 
+      object-fit="cover"></video>
+      <image wx:else bindtap="play" src="{{item.data.coverUrl}}" id="{{item.data.vid}}" data-index="{{item.id}}"></image>
+      <text class="title">{{item.data.title}}</text>
+      <view class="videoInfo">
+        <view class="creator">
+          <image src="{{item.data.creator.avatarUrl}}"></image>
+          <text>{{item.data.creator.nickname}}</text>
+        </view>
+        <view class="videoInteraction">
+          <text class="iconfont icon-dianzan"></text>
+          <text class="count">{{item.data.praisedCount}}</text>
+          <text class="iconfont icon-pinglun"></text>
+          <text class="count">{{item.data.commentCount}}</text>
+          <button open-type="share" class="btn">
+            <text class="iconfont icon-gengduo"></text>
+          </button>
+
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

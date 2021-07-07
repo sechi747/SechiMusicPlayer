@@ -1,0 +1,34 @@
+<view class="playContainer">
+  <!-- 歌曲信息区域 -->
+  <view class="musicInfo">
+    <text class="title">{{musicInfo.name}}</text>
+    <text class="author">{{musicInfo.ar[0].name}}</text>
+  </view>
+  <!-- 专辑封面区域 -->
+  <view class="album">
+    <image src="{{musicInfo.al.picUrl}}" class="{{isPlay && 'rotateAlbum'}}"></image>
+  </view>
+  <!-- 进度条控制区域 -->
+  <view class="progressController">
+    <text>{{currentTime}}</text>
+    <!-- 总进度条 -->
+    <view class="progressBar">
+      <!-- 实时进度条 -->
+      <view class="currentProgressBar" style="width:{{currentWidth + 'rpx'}}">
+        <!-- 进度条上的小圆点 -->
+        <view class="circle"></view>
+      </view>
+    </view>
+    <text>{{durationTime}}</text>
+  </view>
+  <!-- 播放控制区域 -->
+  <view class="playController">
+    <text class="iconfont icon-bofangmoshi"></text>
+    <text class="iconfont icon-shangyishou" id="pre" bindtap="handleSwitch"></text>
+    <text class="iconfont {{isPlay?'icon-zanting':'icon-bofang'}} big" bindtap="handleMusicPlay"></text>
+    <text class="iconfont icon-xiayishou" id="next" bindtap="handleSwitch"></text>
+    <text class="iconfont icon-bofangliebiao"></text>
+  </view>
+</view>
+
+

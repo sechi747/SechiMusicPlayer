@@ -1,0 +1,55 @@
+<view class="searchContainer">
+  <!-- 头部区域 -->
+  <view class="header">
+    <text class="iconfont icon-huitui" bindtap="backToVideo"></text>
+    <input type="text" value="{{searchContent}}" bindinput="handleInput" bindconfirm="handleConfirm" placeholder="{{placeholderDefault}}" placeholder-class="placeholder" focus="true" />
+    <text class="clear" bindtap="clearSearchContent" hidden="{{!searchContent}}">X</text>
+  </view>
+  <!-- 搜索历史区域 -->
+  <block wx:if="{{!searchList.length}}">
+    <view class="historyContainer" wx:if="{{historyList.length}}">
+      <view class="header">
+        <text class="title">搜索历史</text>
+        <text class="iconfont {{isFold?'icon-zhankai':'icon-shouqi'}}" bindtap="handleUnfold"></text>
+        <text class="iconfont icon-shanchu" bindtap="clearHistory"></text>
+      </view>
+      <van-dialog id="van-dialog" cancel-button-color="#f44336" confirm-button-color="grey" />
+      <view class="historyList" style="{{isFold?'':'flex-wrap: wrap'}}">
+        <text class="historyItem" wx:for="{{historyList}}" wx:key="item">{{item}}</text>
+      </view>
+    </view>
+  </block>
+  <!-- 推荐搜索区域 -->
+  <block wx:if="{{!searchList.length}}">
+    <view class="recommendSearchContainer">
+      <view class="title">推荐搜索</view>
+      <view class="recommendSearchList">
+        <text class="recommendSearchItem" wx:for="{{recommendSearch}}" wx:key="id">{{item.name}}</text>
+      </view>
+    </view>
+  </block>
+  <!-- 热搜榜区域 -->
+  <block wx:if="{{!searchList.length}}">
+    <view class="hotListContainer">
+      <view class="title">热搜榜</view>
+      <view class="hotList">
+        <view class="hotListItem" wx:for="{{hotList}}" wx:key="searchWord">
+          <text class="order">{{index + 1}}</text>
+          <text class="name">{{item.searchWord}}</text>
+          <image wx:if="{{item.iconUrl}}" src="{{item.iconUrl + '?param=80y40'}}"></image>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!-- 搜索区域 -->
+  <block wx:else>
+    <view class="searchListContainer">
+      <view class="searchList">
+        <view class="searchItem" wx:for="{{searchList}}" wx:key="id">
+          <text class="iconfont icon-sousuo"></text>
+          <text class="itemName">{{item.name}} - {{item.artists[0].name}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,99 @@
+/* 轮播图区域 */
+.banner {
+  width: 100%;
+  height: 300rpx;
+}
+.banner image {
+  width: 100%;
+  height: 100%;
+}
+/* 图标导航栏区域 */
+.navContainer {
+  display: flex;
+}
+.navItem {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  align-items: center;
+}
+.navItem .iconfont {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  line-height: 100rpx;
+  text-align: center;
+  background-color: rgb(240, 19, 19);
+  margin: 20rpx 0;
+  font-size: 50rpx;
+}
+.navItem text {
+  font-size: 24rpx;
+}
+/* 推荐歌单区域 */
+.recommendContainer {
+  padding: 20rpx;
+}
+.recommend {
+  display: flex;
+  height: 300rpx;
+}
+.scrollItem {
+  margin-right: 20rpx;
+  width: 200rpx;
+}
+.scrollItem image {
+  height: 200rpx;
+  width: 200rpx;
+  border-radius: 10rpx;
+}
+.scrollItem text {
+  font-size: 26rpx;
+  /* 多行文本溢出隐藏 */
+  display:-webkit-box;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient:vertical;
+}
+/* 排行榜区域 */
+.topListContainer {
+  padding: 20rpx;
+}
+.topListSwiper {
+  height: 440rpx;
+}
+.songList {
+  width: 96%;
+  background-color: #fbfbfb;
+}
+.songList .title {
+  font-size: 30rpx;
+  line-height: 80rpx;
+}
+.song {
+  /* 当一个元素设置为flex布局时，其子元素自动变成block */
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.song image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+}
+.song .count {
+  font-size: 32rpx;
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+.song .musicTitle {
+  font-size: 28rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  overflow: hidden;    
+  text-overflow:ellipsis;    
+  white-space: nowrap;
+}

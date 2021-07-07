@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-dialog": "@vant/weapp/dialog/index"
+  },
+  "navigationBarTitleText": "想听点儿啥？",
+  "navigationBarBackgroundColor": "#108dc6",
+  "navigationBarTextStyle": "black"
+}

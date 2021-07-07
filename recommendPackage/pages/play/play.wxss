@@ -1,0 +1,130 @@
+.playContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background: linear-gradient(to bottom, #d9a7c7, #f2e0eb);
+}
+/* 歌曲信息区域 */
+.musicInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 200rpx;
+}
+.musicInfo .title {
+  font-size: 30rpx;
+  padding-bottom: 4rpx;
+  color: #8e488e;
+}
+.musicInfo .author {
+  font-size: 24rpx;
+  color: #b04c8c;
+}
+/* 专辑图片区域 */
+.album {
+  width: 450rpx;
+  height: 450rpx;
+  padding: 6rpx;
+  border-radius: 50%;
+  animation: aura 6s linear infinite;
+}
+.album image {
+  width: 450rpx;
+  height: 450rpx;
+  border-radius: 50%;
+}
+.rotateAlbum {
+  animation: rotate 18s linear infinite;
+}
+@keyframes aura {
+  0% {
+    box-shadow: 0 0 20rpx #ce93d8
+  }
+
+  25% {
+    box-shadow: 0 0 60rpx #ba68c8
+  }
+
+  50% {
+    box-shadow: 10rpx 10rpx 80rpx #ab47bc
+  }
+
+  75% {
+    box-shadow: 0 0 60rpx #9c27b0
+  }
+
+  100% {
+    box-shadow: 0 0 20rpx #ce93d8
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* 进度条控制区域 */
+.progressController {
+  position: absolute;
+  bottom: 160rpx;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+}
+.progressController text {
+  padding: 0 20rpx;
+  font-size: 24rpx;
+  color: #cc8ab5;
+}
+.progressBar {
+  position: relative;
+  width: 540rpx;
+  height: 4rpx;
+  border: 1rpx solid rgba(195,195,195, 0.4);
+  border-radius: 20rpx;
+  background: rgba(195,195,195, 0.4);
+  margin: auto;
+}
+.currentProgressBar {
+  position: absolute;
+  left: -2rpx;
+  top: -2rpx;
+  z-index: 1;
+  height: 4rpx;
+  border: 1rpx solid #fb9ccd;
+  border-radius: 20rpx;
+  background: #fb9ccd;
+}
+.circle {
+  position: absolute;
+  right: -15rpx;
+  top: -6rpx;
+  width: 15rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  background: #f759ab;
+}
+/* 播放控制区域 */
+.playController {
+  position: absolute;
+  bottom: 40rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #cd8cb6;
+}
+.playController text {
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 50rpx;
+  color: #c374a7;
+}
+.playController .big {
+  font-size: 80rpx;
+}

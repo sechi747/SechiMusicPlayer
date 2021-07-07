@@ -1,0 +1,35 @@
+<view class="recommendContainer">
+  <!-- 头部区域 -->
+  <view class="header">
+    <image src="https://z3.ax1x.com/2021/06/03/23Sp0P.jpg"></image>
+    <view class="date">
+      <text class="day">{{day}}</text>
+      <text class="month">/ {{month}}</text>
+    </view>
+  </view>
+  <!-- 列表区域 -->
+  <view class="listContainer">
+    <!-- 列表头部区域 -->
+    <view class="listHeader">
+      <view class="playAll">
+        <text class="iconfont icon-bofang"></text>
+        <text>播放全部</text>
+      </view>
+      <view class="selectAll">
+        <text>全选</text>
+        <text class="iconfont icon-quanxuan"></text>
+      </view>
+    </view>
+    <!-- 列表内容区域 -->
+    <scroll-view scroll-y class="listScroll">
+      <view class="scrollItem" wx:for="{{recommendList}}" wx:key="id" bindtap="toPlay" data-song="{{item}}" data-index="{{index}}">
+        <image src="{{item.al.picUrl}}"></image>
+        <view class="musicInfo">
+          <text class="title">{{item.name}}</text>
+          <text class="author">{{item.ar[0].name}} - {{item.al.name}}</text>
+        </view>
+        <text class="iconfont icon-gengduo"></text>
+      </view>
+    </scroll-view>
+  </view>
+</view>

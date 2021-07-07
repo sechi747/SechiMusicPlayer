@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/test/test",
+    "pages/video/video",
+    "pages/personal/personal",
+    "pages/login/login"
+  ],
+  "subPackages": [
+    {
+      "root": "recommendPackage",
+      "pages": [
+        "pages/play/play",
+        "pages/recommend/recommend"
+      ]
+    },
+    {
+      "root": "searchPackage",
+      "pages": [
+        "pages/search/search"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/index/index": {
+      "network": "all",
+      "packages": ["recommendPackage"]
+    },
+    "pages/video/video": {
+      "network": "all",
+      "packages": ["searchPackage"]
+    }
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Sechi Music",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#6b6d85",
+    "selectedColor": "#343541",
+    "backgroundColor": "#f1f2f6",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "/static/img/index/home.png",
+        "selectedIconPath": "/static/img/index/home-current.png"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "视频",
+        "iconPath": "/static/img/index/video.png",
+        "selectedIconPath": "/static/img/index/video-current.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人页面",
+        "iconPath": "/static/img/index/personal.png",
+        "selectedIconPath": "/static/img/index/personal-current.png"
+      }
+    ]
+  }
+}

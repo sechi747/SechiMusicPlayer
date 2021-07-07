@@ -1,0 +1,4 @@
+<view class="container">
+  <view class="title">连接微信服务器</view>
+  <button bindtap="handleUserInfo">获取用户信息</button>
+</view>

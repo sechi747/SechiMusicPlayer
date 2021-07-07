@@ -1,0 +1,107 @@
+/* 头部区域 */
+.videoContainer .header {
+  display: flex;
+  padding: 10rpx;
+}
+.videoContainer .header image {
+  width: 60rpx;
+  height: 60rpx;
+}
+.videoContainer .header .logo {
+  border-radius: 50%;
+}
+.videoContainer .header .search {
+  border: 1rpx solid #333;
+  border-radius: 30rpx;
+  flex: 1;
+  font-size: 26rpx;
+  line-height: 60rpx;
+  text-align: center;
+  margin: 0 20rpx;
+  color: #c89dac;
+}
+/* 导航区域 */
+.videoContainer .navScroll {
+  display: flex;
+  white-space: nowrap;
+  height: 60rpx;
+  margin-bottom: 10rpx;
+}
+.navScroll .navItem {
+  padding: 0 30rpx;
+  font-size: 28rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.navScroll .navItem .navContent {
+  box-sizing: border-box;
+  height: 60rpx;
+}
+.navScroll .navItem .active {
+  border-bottom: 2rpx solid #ff4757;
+}
+/* 视频区域 */
+.videoScroll {
+  /* calc可以动态计算宽高，vh表示视口高度，vw表示视口宽度 */
+  height: calc(100vh - 163rpx);
+}
+.videoScroll .videoItem {
+  padding: 0 3%;
+}
+.videoItem video {
+  width: 100%;
+  height: 360rpx;
+  border-radius: 10rpx;
+}
+.videoItem image {
+  width: 100%;
+  height: 360rpx;
+  border-radius: 10rpx;
+}
+.videoItem .title {
+  font-size: 26rpx;
+}
+.videoItem .videoInfo {
+  display: flex;
+  border-top: 1px solid #bdc3c7;
+  margin: 12rpx 0;
+  padding: 12rpx 0;
+  justify-content: space-between;
+}
+.videoItem .videoInfo .creator {
+  display: flex;
+}
+.videoItem .videoInfo .creator image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+.videoItem .videoInfo .creator text {
+  font-size: 26rpx;
+  line-height: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  margin-left: 16rpx;
+}
+.videoItem .videoInfo .videoInteraction {
+  display: flex;
+  
+}
+.videoItem .videoInfo .videoInteraction .iconfont {
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  padding: 0 20rpx;
+}
+.videoItem .videoInfo .videoInteraction .count {
+  font-size: 16rpx;
+  margin: 0 -14rpx;
+}
+.videoItem .videoInfo .videoInteraction .btn {
+  display: inline-block;
+  width: 72rpx;
+  height: 60rpx;
+  padding: 0;
+  background-color: transparent;
+  border-color: transparent;
+}

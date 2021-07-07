@@ -1,0 +1,180 @@
+.searchContainer {
+  height: 100%;
+  padding: 0 20rpx;
+  background: linear-gradient(to bottom, #108dc7, #ef8e38);
+  overflow-y: scroll;
+}
+/* 头部区域 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 0rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.header .icon-huitui {
+  height: 50rpx;
+  width: 50rpx;
+  line-height: 50rpx;
+  font-size: 50rpx;
+  margin-right: 15rpx;
+}
+.header input {
+  color: #ff4757;
+  flex: 1;
+  line-height: 60rpx;
+  height: 60rpx;
+  background-color: rgba(213, 213, 213, 0.5);
+  border-radius: 20rpx;
+  font-size: 26rpx;
+}
+.header .clear {
+  position: absolute;
+  right: 35rpx;
+  top: 10rpx;
+  z-index: 10;
+  font-size: 30rpx;
+  color: #bdbdbd;
+}
+.placeholder {
+  font-size: 26rpx;
+  color: rgba(176, 94, 85, 0.6);
+  padding-left: 16rpx;
+  text-align: left;
+}
+/* 搜索历史区域 */
+.historyContainer {
+  margin-top: 10rpx;
+}
+.historyContainer .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.historyContainer .header .title {
+  line-height: 80rpx;
+  height: 80rpx;
+  font-size: 30rpx;
+  color: #ff6b6b;
+}
+.historyContainer .header .icon-shanchu {
+  font-size: 34rpx;
+  width: 50rpx;
+  height: 50rpx;
+  color: #f06292;
+}
+.historyContainer .header .icon-zhankai {
+  position: relative;
+  top: 78rpx;
+  right: -285rpx;
+  width: 45rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 38rpx;
+  text-align: center;
+  padding-bottom: 10rpx;
+  background-color: rgba(255,255,255, 0.1);
+  border-radius: 50%;
+}
+.historyContainer .header .icon-shouqi {
+  position: relative;
+  top: 78rpx;
+  right: -285rpx;
+  width: 45rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 38rpx;
+  text-align: center;
+  background-color: rgba(255,255,255, 0.1);
+  border-radius: 50%;
+}
+.historyList {
+  display: flex;
+  /* flex-wrap: wrap; */
+  max-width: 630rpx;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.historyItem {
+  font-size: 26rpx;
+  margin-top: 14rpx;
+  margin-right: 20rpx;
+  padding: 0 14rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  align-items: center;
+  border-radius: 25rpx;
+  color: #ff9393;
+  background-color: rgba(255,255,255, 0.1);
+}
+/* 推荐搜索区域 */
+.recommendSearchContainer {
+  margin-top: 10rpx;
+}
+.recommendSearchContainer .title {
+  line-height: 80rpx;
+  height: 80rpx;
+  font-size: 30rpx;
+  color: #ff6b6b;
+}
+.recommendSearchList {
+  display: flex;
+}
+.recommendSearchItem {
+  font-size: 26rpx;
+  margin-right: 20rpx;
+  padding: 0 14rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  align-items: center;
+  border-radius: 25rpx;
+  color: #ff9393;
+  background-color: rgba(255,255,255, 0.1)
+}
+/* 热搜榜区域 */
+.hotListContainer {
+  margin-top: 20rpx;
+}
+.hotListContainer .title {
+  line-height: 80rpx;
+  height: 80rpx;
+  font-size: 30rpx;
+  color: #ff6b6b;
+  border-bottom: 1px solid #ced4da;
+}
+.hotList {
+  display: flex;
+  flex-wrap: wrap;
+}
+.hotList .hotListItem {
+  width: 50%;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 28rpx;
+  color: #ff9393;
+}
+.hotListItem .order {
+  margin-right: 24rpx;
+}
+.hotListItem image {
+  flex-shrink: 0;
+  width: 35rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
+}
+/* 搜索区域 */
+.searchItem {
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.searchItem .itemName{
+  flex: 1;
+  font-size: 26rpx;
+  margin-left: 20rpx;
+  width: 600rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #531dab;
+}

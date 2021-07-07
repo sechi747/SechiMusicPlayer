@@ -1,0 +1,6 @@
+@import "/static/icon-font/icon-font.wxss";
+
+page {
+  width:100%;
+  height: 100%;
+}
